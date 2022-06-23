@@ -35,10 +35,6 @@ with open( UPDATE_FILE_PATE , 'w', encoding='utf-8') as file:
     file.write(notionMd)
 
 
-##깃에 업데이트
-# GitMain.commitMessage
-# git.add()
-# git.commit()
-# git.push()
+
 
 
