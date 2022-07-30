@@ -5,22 +5,28 @@ from pyPackage.method import notionAPI as API
 import pyPackage.envMain
 import pyPackage.convertNotionToMd
 import pyPackage.GitMain
+import os
 
 git = pyPackage.GitMain
 env = pyPackage.envMain
 convertN2M = pyPackage.convertNotionToMd
 
 ## dbID입력
-URL =  API.getUrl(env.DB_ID)
+URL = API.getUrl(env.DB_ID)
 HEADER = API.getHeader(env.NOTION_TOKEN)
 
 ## API 요청
 
-notionJSON = API.submmitRequestToJson(URL,HEADER)
+notionJSON = API.submmitRequestToJson(URL, HEADER)
 notionDic = json.loads(notionJSON)
 notionMd = convertN2M.getTableResult(notionDic)
 
 ## 지정한 경로에 MD파일 저장 또는 업데이트
+print(os.path.exists('./about'))
+
+if not os.path.exists('./about'):
+    os.mkdir('./about')
+
 with open('about/interest.md', 'w', encoding='utf-8') as file:
     file.write(notionMd)
 
@@ -28,8 +34,6 @@ with open('about/interest.md', 'w', encoding='utf-8') as file:
 API.saveNotionResponse(notionJSON)
 
 ##깃에 업데이트
-git.add()
-git.commit()
-git.push()
-
-
+# git.add()
+# git.commit()
+# git.push()

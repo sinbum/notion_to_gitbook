@@ -168,3 +168,5 @@ cython_debug/
 
 resources/
 config.cfg
+.idea
+/about
