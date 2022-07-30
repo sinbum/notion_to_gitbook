@@ -1,9 +1,86 @@
 {
     "has_more": true,
-    "next_cursor": "96374e49-8bf1-4608-8c37-cf3972e02cac",
+    "next_cursor": "4921bb91-ed1a-4639-8696-1c6f8673c94a",
     "object": "list",
     "page": {},
     "results": [
+        {
+            "archived": false,
+            "cover": null,
+            "created_by": {
+                "id": "2ed7b474-4fdf-42b9-98bb-eec66bb5df9f",
+                "object": "user"
+            },
+            "created_time": "2022-07-30T16:56:00.000Z",
+            "icon": null,
+            "id": "f9d28329-0154-47be-8b9e-2471df9cc3b6",
+            "last_edited_by": {
+                "id": "2ed7b474-4fdf-42b9-98bb-eec66bb5df9f",
+                "object": "user"
+            },
+            "last_edited_time": "2022-07-30T16:56:00.000Z",
+            "object": "page",
+            "parent": {
+                "database_id": "100faa3d-e8dd-4419-8ceb-878c4784a7f7",
+                "type": "database_id"
+            },
+            "properties": {
+                "URL": {
+                    "id": "BLpi",
+                    "type": "url",
+                    "url": "https://kblck.com/487"
+                },
+                "날짜": {
+                    "date": null,
+                    "id": "%3Dq%7D%60",
+                    "type": "date"
+                },
+                "대분류": {
+                    "id": "tJzQ",
+                    "select": null,
+                    "type": "select"
+                },
+                "생성일자": {
+                    "created_time": "2022-07-30T16:56:00.000Z",
+                    "id": "Rcso",
+                    "type": "created_time"
+                },
+                "소분류": {
+                    "id": "HJCT",
+                    "multi_select": [],
+                    "type": "multi_select"
+                },
+                "이름": {
+                    "id": "title",
+                    "title": [
+                        {
+                            "annotations": {
+                                "bold": false,
+                                "code": false,
+                                "color": "default",
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false
+                            },
+                            "href": null,
+                            "plain_text": "파이썬 yaml 파일 쓰기에 한글 문제",
+                            "text": {
+                                "content": "파이썬 yaml 파일 쓰기에 한글 문제",
+                                "link": null
+                            },
+                            "type": "text"
+                        }
+                    ],
+                    "type": "title"
+                },
+                "중분류": {
+                    "id": "WFuD",
+                    "select": null,
+                    "type": "select"
+                }
+            },
+            "url": "https://www.notion.so/yaml-f9d28329015447be8b9e2471df9cc3b6"
+        },
         {
             "archived": false,
             "cover": null,
@@ -8726,97 +8803,6 @@
                 }
             },
             "url": "https://www.notion.so/php-cd7e86825af248dca03a7dfe7eb5c3c6"
-        },
-        {
-            "archived": false,
-            "cover": null,
-            "created_by": {
-                "id": "2ed7b474-4fdf-42b9-98bb-eec66bb5df9f",
-                "object": "user"
-            },
-            "created_time": "2022-05-03T10:44:00.000Z",
-            "icon": null,
-            "id": "4921bb91-ed1a-4639-8696-1c6f8673c94a",
-            "last_edited_by": {
-                "id": "2ed7b474-4fdf-42b9-98bb-eec66bb5df9f",
-                "object": "user"
-            },
-            "last_edited_time": "2022-05-05T14:48:00.000Z",
-            "object": "page",
-            "parent": {
-                "database_id": "100faa3d-e8dd-4419-8ceb-878c4784a7f7",
-                "type": "database_id"
-            },
-            "properties": {
-                "URL": {
-                    "id": "BLpi",
-                    "type": "url",
-                    "url": "https://hippocode.tistory.com/9"
-                },
-                "날짜": {
-                    "date": null,
-                    "id": "%3Dq%7D%60",
-                    "type": "date"
-                },
-                "대분류": {
-                    "id": "tJzQ",
-                    "select": {
-                        "color": "pink",
-                        "id": "9b74a820-6d2d-438f-8a14-22663f08466a",
-                        "name": "소프트웨어"
-                    },
-                    "type": "select"
-                },
-                "생성일자": {
-                    "created_time": "2022-05-03T10:44:00.000Z",
-                    "id": "Rcso",
-                    "type": "created_time"
-                },
-                "소분류": {
-                    "id": "HJCT",
-                    "multi_select": [
-                        {
-                            "color": "blue",
-                            "id": "fd8c5fe7-bd68-4438-ada8-c3befa6ceab0",
-                            "name": "nginx"
-                        }
-                    ],
-                    "type": "multi_select"
-                },
-                "이름": {
-                    "id": "title",
-                    "title": [
-                        {
-                            "annotations": {
-                                "bold": false,
-                                "code": false,
-                                "color": "default",
-                                "italic": false,
-                                "strikethrough": false,
-                                "underline": false
-                            },
-                            "href": null,
-                            "plain_text": "[nginx] 파일 업로드 크기 제한 변경",
-                            "text": {
-                                "content": "[nginx] 파일 업로드 크기 제한 변경",
-                                "link": null
-                            },
-                            "type": "text"
-                        }
-                    ],
-                    "type": "title"
-                },
-                "중분류": {
-                    "id": "WFuD",
-                    "select": {
-                        "color": "red",
-                        "id": "130362d3-a05f-4283-9265-5d04123de2de",
-                        "name": "서버툴"
-                    },
-                    "type": "select"
-                }
-            },
-            "url": "https://www.notion.so/nginx-4921bb91ed1a463986961c6f8673c94a"
         }
     ],
     "type": "page"

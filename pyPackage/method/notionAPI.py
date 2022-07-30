@@ -2,6 +2,7 @@
 
 import requests
 import json
+import yaml
 
 
 # header = {
@@ -36,8 +37,18 @@ def submmitRequestToJson(url, headers):
     response = json.dumps(response, indent=4, sort_keys=True, ensure_ascii=False)
     return response
 
+
 # 제이슨형태로 현재 경로에 저장.
 
 def saveNotionResponse(response):
     file = open('./pyPackage/DB/notionResponse.json', 'w', encoding='utf-8')
     print(response, file=file)
+    file.close()
+
+
+def saveNotionResponseYaml(response):
+    file = open('./pyPackage/DB/notionResponse.yaml', 'w', encoding='utf-8')
+    response_obj = json.loads(response)
+    print(yaml.dump(response_obj,allow_unicode=True),file=file)
+    file.close()
+

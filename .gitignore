@@ -170,3 +170,4 @@ resources/
 config.cfg
 .idea
 /about
+envMain.py
