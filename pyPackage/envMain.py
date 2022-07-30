@@ -1,16 +1,4 @@
-import configparser
-
-
 # 토큰
-def config_read(path):
-    config = configparser.ConfigParser()
-    config.read(path, encoding='utf-8')
-    return config
 
-
-def get_notion_token(config):
-    return config['NOTION_API_OAUTH']['NOTION_TOKEN']
-
-
-def get_notion_db_id(config):
-    return config['NOTION_API_OAUTH']['DB_ID']
+NOTION_TOKEN = "secret_4fT6h0mjmse9Pz6AP4arGfmsCwy4WftGizg74pLem5u"
+DB_ID = "100faa3de8dd44198ceb878c4784a7f7"

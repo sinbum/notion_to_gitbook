@@ -1,0 +1,77 @@
+{
+            "archived": false,
+            "cover": null,
+            "created_by": {
+                "id": "2ed7b474-4fdf-42b9-98bb-eec66bb5df9f",
+                "object": "user"
+            },
+            "created_time": "2022-06-17T09:16:00.000Z",
+            "icon": null,
+            "id": "37f718a2-8352-4c51-85a4-f7b086fbcbb3",
+            "last_edited_by": {
+                "id": "2ed7b474-4fdf-42b9-98bb-eec66bb5df9f",
+                "object": "user"
+            },
+            "last_edited_time": "2022-06-17T09:16:00.000Z",
+            "object": "page",
+            "parent": {
+                "database_id": "100faa3d-e8dd-4419-8ceb-878c4784a7f7",
+                "type": "database_id"
+            },
+            "properties": {
+                "URL": {
+                    "id": "BLpi",
+                    "type": "url",
+                    "url": "https://py-son.tistory.com/2"
+                },
+                "날짜": {
+                    "date": null,
+                    "id": "%3Dq%7D%60",
+                    "type": "date"
+                },
+                "대분류": {
+                    "id": "tJzQ",
+                    "select": null,
+                    "type": "select"
+                },
+                "생성일자": {
+                    "created_time": "2022-06-17T09:16:00.000Z",
+                    "id": "Rcso",
+                    "type": "created_time"
+                },
+                "소분류": {
+                    "id": "HJCT",
+                    "multi_select": [],
+                    "type": "multi_select"
+                },
+                "이름": {
+                    "id": "title",
+                    "title": [
+                        {
+                            "annotations": {
+                                "bold": false,
+                                "code": false,
+                                "color": "default",
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false
+                            },
+                            "href": null,
+                            "plain_text": "[PyCharm] 파이참 완전 편한 단축키 15개 깔끔 정리",
+                            "text": {
+                                "content": "[PyCharm] 파이참 완전 편한 단축키 15개 깔끔 정리",
+                                "link": null
+                            },
+                            "type": "text"
+                        }
+                    ],
+                    "type": "title"
+                },
+                "중분류": {
+                    "id": "WFuD",
+                    "select": null,
+                    "type": "select"
+                }
+            },
+            "url": "https://www.notion.so/PyCharm-15-37f718a283524c5185a4f7b086fbcbb3"
+        }
