@@ -21,7 +21,7 @@ HEADER = N_API.getHeader(env.NOTION_TOKEN)
 notionJSON = N_API.submmitRequestToJson(URL, HEADER)
 notionDic = json.loads(notionJSON)
 notionMd = convertN2M.getTableResult(notionDic)
-notionWordCloudImage = WC_API.getCloudImage(notionDic)
+notionWordCloudImage = WC_API.part_csv_Maker(notionDic)
 
 ## 지정한 경로에 MD파일 저장 또는 업데이트
 

@@ -1,3 +1,18 @@
+# def rowsForSpark(list):
+#     i = 1
+#     rows = []
+#
+#     for row in list:
+#         rows.append(Row(sqNo=i, part_small_name=row))
+#         i += 1
+#
+#     return rows
+#
+import os
+
+import pandas as pd
+
+
 def allGetterListToOne(list):
     result_list = []
     for row_list in list:
@@ -13,19 +28,20 @@ def allGetterListToOne(list):
     return result_list
 
 
-def getCloudImage(notionDic):
+def part_csv_Maker(notionDic):
     part_small = []
     part_middle = []
     part_big = []
 
+    # 함수 선언부.
     def getPartSmall(part_small_list):
-        resultlist = []
+        resultList = []
 
         if (len(part_small_list) < 1): return None
 
         for part_small_row in part_small_list:
-            resultlist.append(part_small_row['name'])
-        return resultlist
+            resultList.append(part_small_row['name'])
+        return resultList
 
     def getPartMiddle(middle_name):
         if middle_name is None:
@@ -40,6 +56,16 @@ def getCloudImage(notionDic):
 
         return big_name['name']
 
+    def struct_maker(part_list):
+        resultList = []
+        i = 1
+        for row in part_list:
+            resultList.append([i, row])
+            i += 1
+        return resultList
+
+    # 실행부
+
     for row in notionDic['results']:
         row_small_list = getPartSmall(row['properties']['소분류']['multi_select'])
         row_middle_name = getPartMiddle(row['properties']['중분류']['select'])
@@ -53,6 +79,18 @@ def getCloudImage(notionDic):
     part_middle = list(filter(None, part_middle))
     part_big = list(filter(None, part_big))
 
+    part_small = struct_maker(part_small)
+
+    ## id 객체 id 넘버도 필요. 키값으로.
+    ## ,columns=['sequenceNo', 'smallPartName']
+    df = pd.DataFrame(data=part_small)
+    path = os.path.abspath('./pyPackage/test')
+
+    df.to_csv(path_or_buf=path + '\part_small.csv', header=['sequenceNo', 'smallPartName'], index_label=['index'])
+
+    print(path)
+
+    # print(part_small)
 
     # 프레임 만들기 (대분류)
 
