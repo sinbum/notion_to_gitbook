@@ -7,6 +7,7 @@ import pyPackage.envMain
 import pyPackage.convertNotionToMd
 import pyPackage.GitMain
 import os
+import json
 
 git = pyPackage.GitMain
 env = pyPackage.envMain
@@ -15,11 +16,14 @@ convertN2M = pyPackage.convertNotionToMd
 ## dbID입력
 URL = N_API.getUrl(env.DB_ID)
 HEADER = N_API.getHeader(env.NOTION_TOKEN)
+DATA = {}
 
 ## API 요청
 
-notionJSON = N_API.submmitRequestToJson(URL, HEADER)
-notionDic = json.loads(notionJSON)
+notionJson = N_API.submmitRequestToJson(URL, HEADER, DATA)
+notionDic = json.loads(notionJson)
+notionJsonSecond = N_API.AddNextCursor(URL, HEADER, notionDic['has_more'], notionDic['next_cursor'])
+
 notionMd = convertN2M.getTableResult(notionDic)
 notionWordCloudImage = WC_API.part_csv_Maker(notionDic)
 

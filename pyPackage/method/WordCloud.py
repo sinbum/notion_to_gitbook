@@ -19,7 +19,7 @@ def allGetterListToOne(list):
 
         if row_list is None: continue
 
-        if len(row_list) > 1:
+        if len(row_list) > 0:
             for row in row_list:
                 result_list.append(row)
             else:
@@ -75,9 +75,12 @@ def part_csv_Maker(notionDic):
         part_middle.append(row_middle_name)
         part_big.append(row_big_name)
 
+
     part_small = allGetterListToOne(part_small)
     part_middle = list(filter(None, part_middle))
     part_big = list(filter(None, part_big))
+
+    # print(part_small)
 
     part_small = struct_maker(part_small)
 
@@ -88,7 +91,7 @@ def part_csv_Maker(notionDic):
 
     df.to_csv(path_or_buf=path + '\part_small.csv', header=['sequenceNo', 'smallPartName'], index_label=['index'])
 
-    print(path)
+    # print(path)
 
     # print(part_small)
 

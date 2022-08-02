@@ -32,8 +32,8 @@ def submmitRequest(url, headers):
     return response
 
 
-def submmitRequestToJson(url, headers):
-    response = requests.post(url, headers=headers).json()
+def submmitRequestToJson(url, headers, data):
+    response = requests.post(url, headers=headers, data=data).json()
     response = json.dumps(response, indent=4, sort_keys=True, ensure_ascii=False)
     return response
 
@@ -49,6 +49,18 @@ def saveNotionResponse(response):
 def saveNotionResponseYaml(response):
     file = open('./pyPackage/DB/notionResponse.yaml', 'w', encoding='utf-8')
     response_obj = json.loads(response)
-    print(yaml.dump(response_obj,allow_unicode=True),file=file)
+    print(yaml.dump(response_obj, allow_unicode=True), file=file)
     file.close()
 
+
+def AddNextCursor(URL, HEADER, has_more, next_cursor):
+    response = {}
+
+    if has_more is True:
+        DATA = {
+            'start_cursor': next_cursor
+        }
+
+        response = submmitRequestToJson(URL, HEADER, json.dumps(DATA))
+
+    return response
